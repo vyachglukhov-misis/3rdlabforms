@@ -16,17 +16,17 @@ namespace MyDeque {
     }
     public class MyDeque<T> : IEnumerable<T>
     {
-        DoubleNode<T> head;
-        DoubleNode<T> tail;
-        int count;
+        DoubleNode<T> head; // головной/первый элемент
+        DoubleNode<T> tail; // последний/хвостовой элемент
+        int count;  // количество элементов в списке
 
+        // добавление элемента
         public void AddLast(T data)
         {
             DoubleNode<T> node = new DoubleNode<T>(data);
+
             if (head == null)
-            {
                 head = node;
-            }
             else
             {
                 tail.Next = node;
@@ -42,21 +42,15 @@ namespace MyDeque {
             node.Next = temp;
             head = node;
             if (count == 0)
-            {
                 tail = head;
-            }
             else
-            {
                 temp.Previous = node;
-            }
             count++;
         }
         public T RemoveFirst()
         {
             if (count == 0)
-            {
                 throw new InvalidOperationException();
-            }
             T output = head.Data;
             if (count == 1)
             {
@@ -72,14 +66,12 @@ namespace MyDeque {
         }
         public T RemoveLast()
         {
-            T output = tail.Data;
             if (count == 0)
-            {
                 throw new InvalidOperationException();
-            } else if (count == 1)
+            T output = tail.Data;
+            if (count == 1)
             {
-                tail = head = null;
-                tail.Next = null;
+                head = tail = null;
             }
             else
             {
@@ -87,44 +79,54 @@ namespace MyDeque {
                 tail.Next = null;
             }
             count--;
-            return tail.Data;
+            return output;
         }
-        public int Count { get { return count; } }
-        public bool IsEmpty { get { return count == 0; } }
         public T First
         {
             get
             {
                 if (IsEmpty)
-                {
                     throw new InvalidOperationException();
-                }
                 return head.Data;
             }
         }
+        public T Last
+        {
+            get
+            {
+                if (IsEmpty)
+                    throw new InvalidOperationException();
+                return tail.Data;
+            }
+        }
+
+        public int Count { get { return count; } }
+        public bool IsEmpty { get { return count == 0; } }
+
         public void Clear()
         {
             head = null;
             tail = null;
             count = 0;
         }
+
         public bool Contains(T data)
         {
             DoubleNode<T> current = head;
-            while(current != null)
+            while (current != null)
             {
                 if (current.Data.Equals(data))
-                {
                     return true;
-                }
                 current = current.Next;
             }
             return false;
         }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this).GetEnumerator();
         }
+
         IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
             DoubleNode<T> current = head;

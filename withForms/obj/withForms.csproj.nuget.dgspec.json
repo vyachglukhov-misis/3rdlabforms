@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\рофланбулдыга\\Desktop\\newfirstlab\\withForms\\withForms\\withForms.csproj": {}
+    "C:\\Users\\рофланбулдыга\\Desktop\\withForms\\withForms\\withForms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\рофланбулдыга\\Desktop\\newfirstlab\\withForms\\withForms\\withForms.csproj": {
+    "C:\\Users\\рофланбулдыга\\Desktop\\withForms\\withForms\\withForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\рофланбулдыга\\Desktop\\newfirstlab\\withForms\\withForms\\withForms.csproj",
+        "projectUniqueName": "C:\\Users\\рофланбулдыга\\Desktop\\withForms\\withForms\\withForms.csproj",
         "projectName": "withForms",
-        "projectPath": "C:\\Users\\рофланбулдыга\\Desktop\\newfirstlab\\withForms\\withForms\\withForms.csproj",
+        "projectPath": "C:\\Users\\рофланбулдыга\\Desktop\\withForms\\withForms\\withForms.csproj",
         "packagesPath": "C:\\Users\\рофланбулдыга\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\рофланбулдыга\\Desktop\\newfirstlab\\withForms\\withForms\\obj\\",
+        "outputPath": "C:\\Users\\рофланбулдыга\\Desktop\\withForms\\withForms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\рофланбулдыга\\AppData\\Roaming\\NuGet\\NuGet.Config",
