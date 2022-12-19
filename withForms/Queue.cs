@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-namespace queue
+namespace MyQueue
 {
+
     public class Node<T>
     {
         public Node(T data)
@@ -12,12 +13,12 @@ namespace queue
         public T Data { get; set; }
         public Node<T> Next { get; set; }
     }
-    public class Queue<T> : IEnumerable<T>
+    public class MyQueue<T> : IEnumerable<T>
     {
         Node<T> head;
         Node<T> tail;
         int count;
-        public void Enqueue(T data)
+        public void Add(T data)
         {
             Node<T> node = new Node<T>(data);
             Node<T> tempNode = tail;
@@ -28,7 +29,7 @@ namespace queue
                 tempNode.Next = tail;
             count++;
         }
-        public T Dequeue()
+        public T FirstOut()
         {
             if (count == 0)
                 throw new InvalidOperationException();
@@ -93,4 +94,3 @@ namespace queue
         }
     }
 }
-
